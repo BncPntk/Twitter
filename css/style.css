@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+.main-page-container {
+  display: block;
+}
+.container {
+  display: grid;
+  grid-template-columns: 55vw 45vw;
+  grid-template-rows: 95vh 5vh;
+}
+/* left side */
+.main-left-background {
+  width: 55vw;
+  height: 95vh;
+  background-image: url('../images/mainPageBg.png');
+}
+.main-left-background img {
+  max-width: 55vw;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.left-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-logo i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20rem;
+  margin-top: 20%;
+  color: #fff;
+}
+/* left side */
+
+/* right side */
+.main-right {
+  background-color: #000;
+}
+
+.right-logo i {
+  font-size: 3rem;
+  margin: 4.5rem 0 4rem 2rem;
+  color: #eee;
+}
+.right h1 {
+  display: flex;
+  margin: 0rem 0 3rem 2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #eee;
+}
+.right h2 {
+  display: flex;
+  margin: 0rem 0 2rem 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #eee;
+}
+.sign-upBtns {
+  display: block;
+  margin: 1rem 0 0.5rem 2rem;
+  font-size: 1rem;
+  width: 17rem;
+  padding: 0.5rem;
+  border: 0.2rem solid #000;
+  background-color: #fff;
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.sign-upBtns:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.google-logo-btn {
+  width: 1rem;
+  display: flex;
+  margin: 0.2rem 0 0 2.4rem;
+  position: absolute;
+}
+.sign-upBtns i {
+  color: #000;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.signupBtn {
+  background-color: #229bec;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 0.1s;
+}
+.signupBtn:hover {
+  background-color: rgb(34, 135, 236);
+}
+.main-right-text {
+  color: #eee;
+  display: block;
+  text-align: center;
+}
+
+.or {
+  margin: 0 0 0 2.5rem;
+  width: 250px;
+  border-bottom: 0.1rem solid #eee;
+  line-height: 0.2em;
+}
+p span {
+  background-color: #000;
+  padding: 0 0.5rem;
+}
+
+.main-text-tos {
+  margin: 0 0 0 2rem;
+  font-size: 0.7rem;
+  color: #696969;
+  display: block;
+  width: 20.1rem;
+  text-align: left;
+}
+
+.main-text-tos span {
+  color: #229bec;
+  cursor: pointer;
+}
+
+.main-text-tos span:hover {
+  text-decoration: underline;
+}
+
+.main-text-already {
+  margin: 3rem 0 1rem 2rem;
+  font-weight: 900;
+  color: #eee;
+  display: block;
+  text-align: left;
+}
+
+.signinBtn {
+  background-color: #000;
+  color: #229bec;
+  font-weight: 700;
+  border: 0.1rem solid #eee;
+  transition: background-color 0.1s;
+}
+.signinBtn:hover {
+  background-color: rgba(34, 155, 236, 0.1);
+}
+/* right side */
+
+/* footer element */
+.footer-elements {
+  width: 100vw;
+  background-color: #000;
+}
+.footer-elements ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-elements li {
+  display: inline;
+  margin: 1rem 0 0 1.5rem;
+  font-size: 0.7rem;
+}
+.footer-elements a {
+  color: #696969;
+  text-decoration: none;
+  cursor: default;
+}
+.footer-elements a:hover:not(.copy) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* footer element */
+
+/* sign in page */
+.sign-in-page-container {
+  display: none;
+}
+.sign-in-container {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+  background-color: rgb(37, 45, 52);
+}
+.sign-in-modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 5rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.sign-in-modal-content {
+  background-color: #000;
+  margin: auto;
+  padding: 20px;
+  border-radius: 2.5%;
+  width: 35rem;
+  height: 40rem;
+}
+.sing-in-modal-head {
+  color: #eee;
+  margin-top: -0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5vh;
+}
+.fa-xmark {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.fa-xmark:hover {
+  background-color: rgba(68, 68, 68, 0.5);
+}
+.fa-twitter {
+  font-size: 2.3rem;
+  margin-left: -1rem;
+}
+.sign-in-text {
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+.sign-in-buttons {
+  display: block;
+  margin: 0 0 0 8rem;
+}
+.sign-in-phone-email {
+  outline: none;
+  background-color: #000;
+  color: #eee;
+  width: 17rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+  margin: 1.5rem 0 0.5rem 0.8rem;
+  border: 0.1rem solid #eee;
+  border-radius: 0.25rem;
+  transition: color 0.1s;
+}
+.sign-in-phone-email:focus {
+  border: 0.1rem solid #229bec;
+}
+
+.sign-in-phone-email:focus::placeholder {
+  color: #229bec;
+  font-size: 0.9rem;
+  margin-top: 5rem;
+}
+.next {
+  color: #000;
+  background-color: #eee;
+  border: 0;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.1s;
+}
+.next:hover {
+  background-color: rgba(238, 238, 238, 0.9);
+}
+.forgo {
+  color: #eee;
+  background-color: #000;
+  border: 0.1rem solid #eee;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.1s;
+}
+.forgo:hover {
+  background-color: rgba(238, 238, 238, 0.1);
+}
+.sign-up-main-text-tos {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+/* sign in page */
