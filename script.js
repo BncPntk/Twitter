@@ -9,11 +9,23 @@ const mainPageContainer = document.querySelector('.main-page-container');
 
 // sign in page buttons
 const closeSignIn = document.querySelector('.fa-xmark');
+const nextBtn = document.querySelector('.next');
 // sign in page buttons
+
 // sign in page elements
 const signInPageContainer = document.querySelector('.sign-in-page-container');
+const singInContainer = document.querySelector('.sign-in-container')
+const signInModal = document.querySelector('.sign-in-modal');
+const singInModelContainer = document.querySelector('.sign-in-modal-content')
+const username = document.querySelector('.sign-in-phone-email');
+const noId = document.querySelector('.no-id-modal-error');
+const usernameField = document.querySelector('.username-from-input')
 // sign in page elements
 
+// log in elements
+const loginCloseBtn = document.querySelector('#log-in-close');
+const logInModal = document.querySelector('.log-in-after-id');
+// log in elements
 
 const user1 = {
     username: 'user1',
@@ -28,8 +40,20 @@ const user2 = {
 
 const users = [user1, user2];
 
-const goToPage = (page) => {
-    page.style.display = 'block';
+// clear inputs
+username.value = '';
+// clear inputs
+
+// show error modal
+const noIdMessage = () => {
+    noId.style.display = 'flex';
+    setTimeout(() => {
+        noId.style.display = 'none';
+    }, 2000);
+}
+
+const goToPage = (page, type) => {
+    page.style.display = type + '';
 };
 const closePage = (page) => {
     page.style.display = 'none';
@@ -41,7 +65,9 @@ const closePage = (page) => {
 
 // main to sign in
 signinBtn.addEventListener('click', () => {
-    goToPage(signInPageContainer);
+    goToPage(singInContainer, 'grid');
+    // goToPage(singInModelContainer, 'grid')
+    goToPage(signInPageContainer, 'block');
     closePage(mainPageContainer);
 })
 // main to sign in
@@ -49,7 +75,31 @@ signinBtn.addEventListener('click', () => {
 // sign in to main
 
 closeSignIn.addEventListener('click', () => {
-    goToPage(mainPageContainer);
+    goToPage(mainPageContainer, 'block');
     closePage(signInPageContainer);
+    username.value = '';
 })
+
+// sign in second stage
+
+// show error if no id else go to next modal
+nextBtn.addEventListener('click', () => {
+    if (username.value === '') {
+        noIdMessage();
+    } else {
+        closePage(signInModal);
+        goToPage(logInModal, 'block');
+        usernameField.innerHTML = username.value;
+    }
+
+})
+// show error if no id else go to next modal
+// sign in second stage
+
 // sign in to main
+
+// log in password
+loginCloseBtn.addEventListener('click', () => {
+    location.reload();
+})
+// log in password
