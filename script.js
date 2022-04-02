@@ -25,20 +25,30 @@ const usernameField = document.querySelector('.username-from-input')
 // log in elements
 const loginCloseBtn = document.querySelector('#log-in-close');
 const logInModal = document.querySelector('.log-in-after-id');
+const loginBtn = document.querySelector('.log-in-button');
 // log in elements
 
-const user1 = {
-    username: 'user1',
-    password: '12345',
-    name: 'Random Name'
-}
-const user2 = {
-    username: 'user2',
-    password: '12345',
-    name: 'Random User'
-}
+// feed page buttons
+const feedUsernameP = document.querySelector('.feedpage-username-p');
+const feedUsernameSpan = document.querySelector('.feedpage-username-span');
+// feed page buttons
 
-const users = [user1, user2];
+// feed page elements
+const feedPage = document.querySelector('.feeds-page-container');
+// feed page elements
+
+// const user1 = {
+//     username: 'user1',
+//     password: '12345',
+//     name: 'Random Name'
+// }
+// const user2 = {
+//     username: 'user2',
+//     password: '12345',
+//     name: 'Random User'
+// }
+
+// const users = [user1, user2];
 
 // clear inputs
 username.value = '';
@@ -98,8 +108,22 @@ nextBtn.addEventListener('click', () => {
 
 // sign in to main
 
-// log in password
+// log in close
 loginCloseBtn.addEventListener('click', () => {
     location.reload();
 })
-// log in password
+// log in close
+
+// log in to feeds page
+loginBtn.addEventListener('click', () => {
+    closePage(logInModal);
+    closePage(signInModal);
+    closePage(mainPageContainer);
+    closePage(singInContainer);
+    goToPage(feedPage, 'flex');
+    feedUsernameP.innerHTML = `${username.value}`;
+    feedUsernameSpan.innerHTML = `@${username.value}`;
+
+})
+// log in to feeds page
+
